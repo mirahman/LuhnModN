@@ -78,10 +78,15 @@ class LuhnModN {
     }
 }
 
+// to check an existing code for validity 
+
 var myCheck = new LuhnModN(9);
-let myCode = myCheck.getLinkString();
 
 if (myCheck.validateCheckSum('FCSFSGBPX'))
     console.log('valid')
 else
     console.log('invalid');
+
+// to generate a new code
+
+let myCode = myCheck.getLinkString();
