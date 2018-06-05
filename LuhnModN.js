@@ -21,9 +21,9 @@ class LuhnModN {
         let length = this.codeLength - 1;
         //checking the string key is faster than checking string length
 
-        while (code.length < length - 1) {
+        while (code.length < length) {
             let rand = this.getRandomInt(0, this.alphaLength - 1);
-            code = this.alphabet.charAt(rand);
+            code += this.alphabet.charAt(rand);
         }
 
         code = this.attachCheckSum(code, this.generateCheckSum(code));
